@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="check">
+        <h3>로그인화면</h3>
+       <table border="1">
+
+        <tr align="center">
+            <td>
+                아이디
+            </td>
+            <td>
+                <input type="text" name="id"> <br>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                패스워드
+            </td>
+            <td>
+                <input type="password" name="pw"> <br> 
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="서버로 전송">
+            </td>
+        </tr>
+       </table> 
+    </form>
+    <form action="member">
+        <h3>회원가입 화면</h3>
+        <table border="1">
+            <tr>
+                <td>
+                    가입 할 id    
+                </td>
+                <td>
+                    <input type="text" name="id"> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    가입 할 pw
+                </td>
+                <td>
+                    <input type="text" name="pw"> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    가입 할 name
+                </td>
+                <td>
+                    <input type="text" name="name" placeholder="이름 성 순서대로"> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    성별
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="man" checked>남
+        <input type="radio" name="gender" value="woman">여 <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    취미
+                </td>
+                <td>
+                    <input type="checkbox" name="hobby" value="run"> 달리기
+        <input type="checkbox" name="hobby" value="youtube" checked> 동영상보기
+        <input type="checkbox" name="hobby" value="internet"> 인터넷서핑 <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    전화번호 통신사
+                </td>
+                <td>
+                    <select name="tel">
+                        <option value="etc" selected>알뜰폰</option>
+                        <option value="sktelecom">SKT</option>
+                        <option value="lgtelecom">LGT</option>
+                        <option value="ktelecom">KT</option>
+                    </select>
+                    <input type="tel" name="number" placeholder="-없이 숫자만 쓰세요."><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    생년월일
+                </td>
+                <td>
+                    <input type="date"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    가입한 시기
+                </td>
+                <td>
+                    <input type="datetime-local"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    가입한 주
+                </td>
+                <td>
+                    <input type="week"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    하고 싶은 말
+                </td>
+                <td>
+                    <textarea name="word" cols="30" rows="10" placeholder="100글자 이내로 써주세요.">
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="회원가입 완료">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
