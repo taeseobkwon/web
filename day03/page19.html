@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 버튼 하나당 함수 하나
+        function test() {
+        alert('테스트 기능 처리.....')            
+        }
+        function add() {
+        alert('add기능처리')
+        test() //함수안에서 다른 함수 사용 가능
+        //함수를 호출한다. 함수는 여러번 호출가능
+        }
+        function minus() {
+        alert('minus기능처리')    
+        }
+    </script>
+</head>
+<body>
+    <button onclick="test()">테스트를 해보자</button>
+    <button onclick="add()">더해보자</button>
+    <button onclick="minus()">빼보자</button>
+</body>
+</html>
