@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Sortable</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" )
+      .accordion({
+        header: "> div > h3"
+      })
+      .sortable({
+        axis: "y",
+        handle: "h3",
+        stop: function( event, ui ) {
+          // IE doesn't register the blur when sorting
+          // so trigger focusout handlers to remove .ui-state-focus
+          ui.item.children( "h3" ).triggerHandler( "focusout" );
+ 
+          // Refresh accordion to handle new order
+          $( this ).accordion( "refresh" );
+        }
+      });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="accordion">
+  <div class="group">
+    <h3>무지개색1</h3>
+    <div>
+      <p>무지개색1은 빨간색</p>
+    </div>
+    <h3>무지개색2</h3>
+    <div>
+      <p>무지개색2는 주황색</p>
+    </div>
+    <h3>무지개색3</h3>
+    <div>
+      <p>무지개색3은 노랑색</p>
+    </div>
+    <h3>무지개색4</h3>
+    <div>
+      <p>무지개색4는 초록색 <img src=333.jpg></p>
+    </div>
+    <h3>무지개색5</h3>
+    <div>
+      <p>무지개색5는 파란색</p>
+    </div>
+    <h3>무지개색6</h3>
+    <div>
+      <p>무지개색6은 남색</p>
+    </div>
+    <h3>무지개색7</h3>
+    <div>
+      <p>무지개색7은 보라색</p>
+    </div>
+  </div>
+  
+</div>
+ 
+ 
+</body>
+</html>
